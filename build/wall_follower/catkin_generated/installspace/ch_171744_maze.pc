@@ -1,8 +1,0 @@
-prefix=/home/salah/catkin_ws/install
-
-Name: ch_171744_maze
-Description: Description of ch_171744_maze
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
