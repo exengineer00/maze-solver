@@ -46,11 +46,31 @@ catkin_make                 #compiles the catkin workspace
 
 # How to run the project.
 ## 1. Cloning the ROS workspace.
-first you have to clone the repository from git hub, or download the ```.zip``` file and unzip it on the ```home``` directory. then create a work space folder ```catkin``` and move all the folders in the represitory into it
-## 2. Sourcing the workspace.
+first you have to clone the repository from git hub, or download the ```.zip``` file and unzip it on the ```home``` directory.
+## 2. create workspace folders.
+ in home directory create workspace and source folders using the following command 
+```mkdir -p ~/catkin_ws/src```
+## 3. creating the package.
+after creating the workspace and source folder navigate to source folder to create the package using the following commands.
+```
+cd ~/catkin_ws/src/
+catkin_create_pkg wall_follower rospy
+```
+## 4. moving the folders from repository.
+after creating the package now let's move the ```launch``` folder,```world``` and ```scripts``` folders to our package directory ```/home/<user>/catkin_ws/src/wall_follower```
+
+## 5. building our workspace.
+Now the workspace is ready to be built, it can be built using the following commands.
+```
+cd ~/catkin_ws
+catkin_init_workspace       #initiates the catkin workspace
+catkin_make                 #compiles the catkin workspace
+```
+
+## 6. Sourcing the workspace.
 Then you have to source the workspace using the following command.
 ``` source ~/catkin_ws/devel/setup.bash ```
-## 3. Launching.
+## 7. Launching.
 After sourcing the workspace all you have to do is to launch the package using the following command.
 ```roslaunch wall_follower start_maze.launch```
 it supposed to open Gazebo and excute the python code with the world we created.
