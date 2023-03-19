@@ -46,7 +46,7 @@ catkin_make                 #compiles the catkin workspace
 
 # How to run the project.
 ## 1. Cloning the ROS workspace.
-first you have to clone the repository from git hub, or download the ```.zip``` file and unzip it on the ```home``` directory.
+first you have to clone the repository from git hub, or download the ```.zip``` file and unzip it on the ```home``` directory. then create a work space folder ```catkin``` and move all the folders in the represitory into it
 ## 2. Sourcing the workspace.
 Then you have to source the workspace using the following command.
 ``` source ~/catkin_ws/devel/setup.bash ```
